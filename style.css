@@ -1,0 +1,14 @@
+#main {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.col {
+  border-style: inset;
+
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
