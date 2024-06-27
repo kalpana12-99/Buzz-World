@@ -44,13 +44,11 @@
                   <li>Help center access</li>
                 </ul> -->
                 <button
+                  onclick="window.open('https://en.wikipedia.org/wiki/India')"
                   type="button"
                   class="w-100 btn btn-lg btn-outline-primary"
-                  id="btn1"
                 >
-                  <a href="https://en.wikipedia.org/wiki/India"
-                    >More about this zone</a
-                  >
+                  More about this zone
                 </button>
               </div>
             </div>
@@ -70,10 +68,12 @@
                   <li>Priority email support</li>
                   <li>Help center access</li>
                 </ul> -->
-                <button type="button" class="w-100 btn btn-lg btn-primary">
-                    <a href="https://en.wikipedia.org/wiki/United_States">
+                <button
+                  onclick="window.open('https://en.wikipedia.org/wiki/United_States')"
+                  type="button"
+                  class="w-100 btn btn-lg btn-primary"
+                >
                   More about this zone
-                </a>
                 </button>
               </div>
             </div>
@@ -93,11 +93,12 @@
                   <li>Phone and email support</li>
                   <li>Help center access</li>
                 </ul> -->
-                <button type="button" class="w-100 btn btn-lg btn-primary">
-                    <a href="https://en.wikipedia.org/wiki/China";
-                    ">
-                        More about this zone
-                      </a>
+                <button
+                  onclick="window.open('https://en.wikipedia.org/wiki/China')"
+                  type="button"
+                  class="w-100 btn btn-lg btn-primary"
+                >
+                  More about this zone
                 </button>
               </div>
             </div>
@@ -107,6 +108,19 @@
       <br />
       <br />
       <h2>Set an Alarm</h2>
+
+      <form action="/action_page.php">
+        <label for="cars">Choose the country:</label>
+        <select name="country" id="country">
+          <option value="indiaDrop">India</option>
+          <option value="usaDrop">United States</option>
+          <option value="china drop">China</option>
+        </select>
+        <br /><br />
+
+        <button onclick="getOption()">Submit</button>
+      </form>
+      <br />
       <label for="appt">Select a time for your Alarm:</label>
       <input type="time" id="alarm" name="alarm" />
     </div>
@@ -139,6 +153,12 @@
             "https://file-examples.com/storage/fedab560656679c849d6def/2017/11/file_example_MP3_1MG.mp3";
           var audio = new Audio(audioURL);
           audio.play();
+
+          // function getOption(){
+          //   let selectElement = document.querySelector("#country");
+          //   let output = selectElement.value;
+          //   let url = "https://www.geeksforgeeks.org/how-to-get-selected-value-in-dropdown-list-using-javascript/" //for refence
+          // }
         }
       };
       setInterval(updateTime, 1000);
